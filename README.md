@@ -19,6 +19,8 @@
 
 # Изображение
 ![IMG](https://user-images.githubusercontent.com/34632663/186650246-926abd91-2541-4422-93a3-f234acc242ff.png)
+![image](https://user-images.githubusercontent.com/34632663/186684500-79e962bb-1434-49e3-bf53-76068e3aa97f.png)
+
 
 
 # Наша группа VK
