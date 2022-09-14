@@ -86,81 +86,22 @@ local TABLE_TDW = {
 	["OTHER"] = {}
 }
 
--- TEXTURES
-local TEXTURES = {  -- NAME, URL
-	["hud-bg"] = {"hud-bg.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-bg.png"},
-	["hud-bg-head"] = {"hud-bg-head.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-bg-head.png"},
-	["hud-bg-time"] = {"hud-bg-time.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-bg-time.png"},
-	["hud-bg-weapon"] = {"hud-bg-weapon.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-bg-weapon.png"},
-	-- ICONS
-	["hud-health"] = {"hud-health.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-health.png"},
-	["hud-armor"] = {"hud-armor.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-armor.png"},
-	["hud-oxygen"] = {"hud-oxygen.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-oxygen.png"},
-	["hud-eat"] = {"hud-eat.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-eat.png"},
-	["hud-water"] = {"hud-water.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-water.png"},
-	["hud-hygiene"] = {"hud-hygiene.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-hygiene.png"},
-	["hud-ammo"] = {"hud-ammo.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-ammo.png"},
-	["hud-money"] = {"hud-money.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-money.png"},
-	["hud-online"] = {"hud-online.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-online.png"},
-	["hud-id"] = {"hud-id.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-id.png"},
-	["hud-time"] = {"hud-time.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/hud-time.png"},
-	["green-zone"] = {"green-zone.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/green-zone.png"},
-	["convoy-zone"] = {"convoy-zone.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/convoy-zone.png"},
-	["smuggle-zone"] = {"smuggle-zone.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/smuggle-zone.png"},
-	["jailtime"] = {"jailtime.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/jailtime.png"},
-	["wanted-ls"] = {"wanted-ls.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/wanted-ls.png"},
-	["wanted-lv"] = {"wanted-lv.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/wanted-lv.png"},
-	["wanted-sf"] = {"wanted-sf.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/wanted-sf.png"},
-	-- MATERIALS
-	["round"] = {"round.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/round.png"},
-}
+local GH_TEXTURES_BASE_URL = 'https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/'
 
-local TEXTURES_WEAPON = { -- ID, URL
-	["0"] = {"0.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/0.png"},
-	["1"] = {"1.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/1.png"},
-	["2"] = {"2.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/2.png"},
-	["3"] = {"3.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/3.png"},
-	["4"] = {"4.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/4.png"},
-	["5"] = {"5.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/5.png"},
-	["6"] = {"6.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/6.png"},
-	["7"] = {"7.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/7.png"},
-	["8"] = {"8.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/8.png"},
-	["9"] = {"9.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/9.png"},
-	["10"] = {"10.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/10.png"},
-	["11"] = {"11.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/11.png"},
-	["12"] = {"12.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/12.png"},
-	["13"] = {"13.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/13.png"},
-	["14"] = {"14.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/14.png"},
-	["15"] = {"15.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/15.png"},
-	["16"] = {"16.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/16.png"},
-	["17"] = {"17.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/17.png"},
-	["18"] = {"18.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/18.png"},
-	["22"] = {"22.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/22.png"},
-	["23"] = {"23.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/23.png"},
-	["24"] = {"24.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/24.png"},
-	["25"] = {"25.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/25.png"},
-	["26"] = {"26.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/26.png"},
-	["27"] = {"27.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/27.png"},
-	["28"] = {"28.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/28.png"},
-	["29"] = {"29.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/29.png"},
-	["30"] = {"30.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/30.png"},
-	["31"] = {"31.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/31.png"},
-	["32"] = {"32.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/32.png"},
-	["33"] = {"33.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/33.png"},
-	["34"] = {"34.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/34.png"},
-	["35"] = {"35.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/35.png"},
-	["36"] = {"36.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/36.png"},
-	["37"] = {"37.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/37.png"},
-	["38"] = {"38.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/38.png"},
-	["39"] = {"39.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/39.png"},
-	["40"] = {"40.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/40.png"},
-	["41"] = {"41.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/41.png"},
-	["42"] = {"42.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/42.png"},
-	["43"] = {"43.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/43.png"},
-	["44"] = {"44.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/44.png"},
-	["45"] = {"45.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/45.png"},
-	["46"] = {"46.png", "https://github.com/eweest/Trinity-HUD/raw/main/assets/textures/weapon/46.png"}
-}
+local TEXTURES_NAMES = {"hud-bg", "hud-bg-head", "hud-bg-time", "hud-bg-weapon", "hud-health", "hud-armor", "hud-oxygen", 
+"hud-eat", "hud-water", "hud-hygiene", "hud-ammo", "hud-money", "hud-online", "hud-id", "hud-time", "green-zone", 
+"smuggle-zone", "jailtime", "wanted-ls", "wanted-lv", "wanted-sf", "round"}
+
+-- TEXTURES
+local TEXTURES = {}
+for key, value in ipairs(TEXTURES_NAMES) do
+	TEXTURES[value] = {value..".png", GH_TEXTURES_BASE_URL..""..value..".png"}
+end
+
+local TEXTURES_WEAPON = {}
+for i = 0, 46, 1 do
+	TEXTURES_WEAPON[tostring(i)] = {i..".png", GH_TEXTURES_BASE_URL.."weapon/"..i..".png"}
+end
 
 -- GIT-HUB PATH
 local UPDATE_JSON_PATH = "https://raw.githubusercontent.com/eweest/" .. SCRIPT_NAME .. "/main/assets/update.json"
